@@ -47,8 +47,32 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func ruijou() {
+    @IBAction func nijou() {
         number = number * number
+        label.text = String(number)
+        if number >= 5 {
+            label.textColor = UIColor.red
+        } else if number <= -5 {
+            label.textColor = UIColor.blue
+        } else {
+            label.textColor = UIColor.black
+        }
+    }
+    
+    @IBAction func ruijou() {
+        number = Int(pow(Double(number), 3.0))
+        label.text = String(number)
+        if number >= 5 {
+            label.textColor = UIColor.red
+        } else if number <= -5 {
+            label.textColor = UIColor.blue
+        } else {
+            label.textColor = UIColor.black
+        }
+    }
+    
+    @IBAction func root() {
+        number = Int(sqrt(Double(number)))
         label.text = String(number)
         if number >= 5 {
             label.textColor = UIColor.red
